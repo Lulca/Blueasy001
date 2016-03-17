@@ -1,0 +1,57 @@
+.site-header {
+	.bg-img('hero-img.jpg');
+	-ms-behavior: url(/assets/ie8-support/backgroundsize.min.htc);
+	img {
+		margin-top: (38 - 23)/2px;
+	}
+}
+
+.site-nav {
+	background-color: @overlay; 
+	background-color: fade(@overlay, 85%);
+	padding: 60px 0;
+	ul {
+		&:extend(.ul-unstyled);
+		float: right;
+
+		li {
+			display: inline-block;
+			margin-left: 15px;
+			a {
+				.transition();
+				display: block;
+				border: 2px solid transparent;
+				color: #fff;
+				font-weight: 600;
+				text-transform: uppercase;
+				text-decoration: none;
+				padding: 10px 17px;
+				line-height: 1;
+				&.active {
+					border-color: @accent;
+					color: @accent;
+				}
+
+				&:hover {
+					color: @accent;
+				}
+			}
+		}
+	}
+}
+
+.hero-heading {
+	margin: 250px 0;
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 300;
+	font-size: 3em;
+	text-align: center;
+
+	span {
+		background-color: @overlay;
+		bottom: 0 20px;
+	}
+}
+
+
