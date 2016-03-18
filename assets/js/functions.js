@@ -33,8 +33,6 @@
 
   				$getWrapper.find('.thumbs-row').hide();
   				$getWrapper.find('.thumbs-row').filter('[data-tab=' +dataTab+ ']').show();
-
-
   		});
   	}
 
