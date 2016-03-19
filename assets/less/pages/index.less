@@ -118,7 +118,7 @@
 				font-weight: 200;
 				line-height: 1;
 				opacity: 0;
-				transition: all 0.3s ease-in-out;
+				.transition();
 			}
 
 			&:hover:after {
@@ -137,38 +137,6 @@
 }
 .mix(8);
 //section portfolio end
-
-// .thumb-1 {
-// 	.bg-img('thumb-1.jpg');
-// }
-
-// .thumb-2 {
-// 	.bg-img('thumb-2.jpg');
-// }
-
-// .thumb-3 {
-// 	.bg-img('thumb-3.jpg');
-// }
-
-// .thumb-4 {
-// 	.bg-img('thumb-4.jpg');
-// }
-
-// .thumb-5 {
-// 	.bg-img('thumb-5.jpg');
-// }
-
-// .thumb-6 {
-// 	.bg-img('thumb-6.jpg');
-// }
-
-// .thumb-7 {
-// 	.bg-img('thumb-7.jpg');
-// }
-
-// .thumb-8 {
-// 	.bg-img('thumb-8.jpg');
-// }
 
 // section video begin
 	 .stn-video {
@@ -236,3 +204,72 @@
 		font-size: 24px;
 		float: right;
 	}
+
+	// section about who is john
+
+	.stn-about {
+		&:extend(.stn-padding);
+		.bg-img('camera.jpg.png');
+		color: #fff;
+	}
+
+	.social-links {
+		&:extend(.ul-unstyled);
+
+		li {
+			display: inline-block;
+			margin-right: 20px;
+		}
+
+		a {
+			display: table;
+			color: #fff;
+			width: 65px;
+			height: 65px;
+			font-size: 30px;
+			text-align: center;
+			border: 2px solid #fff;
+			.transition();f
+			text-decoration: none;
+			
+			i {
+				display: table-cell;
+				vertical-align: middle;
+			}
+
+			&:hover {
+				border-color: @accent;
+				color: @accent;
+				text-decoration: none;
+			}
+		}
+	}
+
+	//section testimonials
+
+	.stn-testimonials {
+		&:extend(.stn-padding);
+
+		.stn-heading {
+			.icon-quote {
+				color: #515f67;
+				flex: 30px;
+				float: right;
+			}
+		}
+	}
+
+	.tst-quote {
+		margin: 0;
+		font-size: 1.8em;
+		font-weight: 300;
+
+		cite {
+			display: block;
+			color: @accent;
+			font-size: 0.5em;
+			font-weight: 600;
+			margin-top: 25px;
+		}
+	}
+
