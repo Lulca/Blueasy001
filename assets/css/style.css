@@ -1736,7 +1736,8 @@ select[multiple].input-lg {
 }
 .ul-unstyled,
 .horizontal-nav,
-.social-links {
+.social-links,
+.footer-nav {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1756,7 +1757,9 @@ select[multiple].input-lg {
 .stn-video,
 .stn-twitter,
 .stn-about,
-.stn-testimonials {
+.stn-testimonials,
+.site-footer,
+.stn-contact {
   padding: 80px 0;
 }
 @font-face {
@@ -1878,6 +1881,39 @@ select[multiple].input-lg {
 }
 .horizontal-nav.black-font a {
   color: #515f67;
+}
+.frm-group {
+  margin-bottom: 35px;
+}
+.frm-control {
+  background-color: transparent;
+  border: 2px solid #fff;
+  height: 60px;
+  width: 100%;
+  padding: 0 15px;
+}
+textarea.frm-control {
+  height: 215px;
+}
+label {
+  text-transform: uppercase;
+  font-weight: 600;
+  display: block;
+}
+.btn-submit {
+  width: 100%;
+  background-color: #4bcaff;
+  border: none;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 25px 0;
+  font-weight: 600;
+  border: 2px solid #4bcaff;
+  transition: all 0.3s ease-in-out;
+}
+.btn-submit:hover {
+  background-color: transparent;
+  color: #4bcaff;
 }
 body {
   font-family: 'Segoe', Arial, sans-serif;
@@ -2165,4 +2201,50 @@ p {
   font-size: 0.5em;
   font-weight: 600;
   margin-top: 25px;
+}
+.site-footer {
+  background-color: #353f47;
+  color: #515f67;
+  font-size: 0.857em;
+  font-weight: 500;
+}
+.footer-nav {
+  float: left;
+  text-transform: uppercase;
+}
+.footer-nav li {
+  display: inline-block;
+}
+.footer-nav li:before {
+  content: '|';
+}
+.footer-nav li:first-child:before {
+  content: '';
+}
+.footer-nav li:first-child a {
+  padding-left: 0;
+}
+.footer-nav a {
+  color: inherit;
+  display: inline-block;
+  padding: 0 10px;
+}
+.copyright {
+  float: right;
+}
+.stn-contact {
+  background-image: url('../img/camera-2.jpg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  color: #fff;
+}
+.frm-text-col {
+  margin-top: 18px;
+}
+@media (max-width: 768px) {
+  .frm-text-col {
+    margin-top: 0;
+  }
 }
