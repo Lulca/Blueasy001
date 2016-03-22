@@ -37,6 +37,31 @@
   	}
 
   	tabs();
+
+    $(".ninja-btn").click( function() {
+      $(this).toggleClass("active");
+    });
+
+    function blueasyMenu () {
+      var $trigger = $('.trigger-nav'),
+          $menu = $('.trigger-victim');
+          $trigger.click(function(){
+            $(this).next($menu).slideToggle(); 
+          });
+
+          $(window).resize(function () {
+            if ($(window).width() > 992) {
+              
+              $menu.removeAttr('style');
+            } else {
+              $('.horizontal-nav').hide();
+            }
+            
+          });
+    }
+
+    blueasyMenu();
+
   }); //end ready
 
 }(jQuery));

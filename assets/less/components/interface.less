@@ -1,37 +1,185 @@
 //forms, buttons, dialogs etc.
 .horizontal-nav {
-		&:extend(.ul-unstyled);
+	&:extend(.ul-unstyled);
 
-		li {
-			display: inline-block;
-			margin-left: 15px;
+	li {
+		display: inline-block;
+		margin-left: 15px;
+
+		a {
+			.transition();
+			display: block;
+			border: 2px solid transparent;
+			color: #fff;
+			font-weight: 600;
+			text-transform: uppercase;
+			text-decoration: none;
+			padding: 10px 17px;
+			line-height: 1;
+
+			&.active {
+				border-color: @accent;
+				color: @accent;
+			}
+
+			&:hover {
+				color: @accent;
+			}
+		}
+	}
+
+	&.black-font a {
+		color: @font;
+	}
+}
+
+	.main-nav-trigger {
+		float: right;
+		
+	}
+
+	// responsive menu
+	@media (max-width: 992px) {
+		.site-nav {
+			position: relative;
+		}
+
+		.site-nav .horizontal-nav {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			background-color: @overlay;
+			width: 100%;
+			
+
+			li {
+				width: 100%;
+				display: block;
+				margin-left: 0;
+				text-align: center;
+				border-bottom: 1px solid lighten(@overlay, 10%);
+			}
 
 			a {
-				.transition();
-				display: block;
-				border: 2px solid transparent;
-				color: #fff;
-				font-weight: 600;
-				text-transform: uppercase;
-				text-decoration: none;
-				padding: 10px 17px;
-				line-height: 1;
+				display: inline-block;
+				padding: 20px 30px;
 
 				&.active {
-					border-color: @accent;
-					color: @accent;
-				}
-
-				&:hover {
-					color: @accent;
+					border-color: transparent;
 				}
 			}
 		}
 
-		&.black-font a {
-			color: @font;
+
+
+		/* For demo only */
+		
+
+		/* Global Variable */
+		@color10: #FFFFFF;
+
+
+		@fast: 0.3s;
+		@slow: 0.4s;
+		.transition (@time:@slow) {
+			transition:           all @time ease-in-out;
+			-webkit-transition:   all @time ease-in-out;
+			-moz-transition:      all @time ease-in-out;
+			-o-transition:        all @time ease-in-out;
+			-ms-transition:       all @time ease-in-out; 
 		}
-	}
+
+		.transition-delay (@time:@slow) {
+			-webkit-transition-delay: @time;
+			-moz-transition-delay: @time;
+			-o-transition-delay: @time;
+			-ms-transition-delay: @time;
+			transition-delay: @time;
+		}
+
+		.rotate (@deg: 45deg){
+			transform: rotate(@deg);
+			-webkit-transform: rotate(@deg);
+			-moz-transform: rotate(@deg);
+			-o-transform: rotate(@deg);
+			-ms-transform: rotate(@deg);
+		}
+
+/* Element Variables
+   Change @bar-w to adjust entire button size.
+   */
+   @bar-w: 35px;
+   @bar-o: @bar-w /3.3;
+   @bar-h: 2px;
+
+   /* Ninja Button styles */
+   .ninja-btn {
+   	display: inline-block;
+   	float: left;
+   	position: relative;
+   	width: @bar-w;
+   	height: (@bar-o * 2) + @bar-h;
+   	cursor: pointer;
+   	padding: 0;
+   	top: 9px;
+   }
+
+   .ninja-btn span,
+   .ninja-btn span:before,
+   .ninja-btn span:after {
+   	.transition(@fast);
+   	background-color: @color10;
+   	width: @bar-w;
+   	height: @bar-h;
+
+   	&:hover {
+   		background-color: @accent;
+   	}
+   }
+
+
+
+
+
+
+
+   .ninja-btn span {
+   	position: relative;
+   	display: inline-block;
+   	float: left;
+   	margin-top: @bar-o;
+
+   	&:before,
+   	&:after {
+   		content: "";
+   		position: absolute;
+   		left: 0;
+   	}
+   	&:before {
+   		top: -@bar-o;
+   	}
+   	&:after {
+   		top: @bar-o;
+   	}
+
+   	}/* Ninja Button */
+
+
+   	.ninja-btn.active span{
+   		background-color: transparent;
+   		&:before,
+   		&:after {
+   			top: 0;
+   		}
+   		&:before {
+   			.rotate(-135deg);
+   		}
+   		&:after {
+   			.rotate(135deg);
+   		}
+   		}/* Ninja Button Active */
+
+   	}
 
 	// form
 

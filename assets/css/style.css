@@ -1882,6 +1882,109 @@ select[multiple].input-lg {
 .horizontal-nav.black-font a {
   color: #515f67;
 }
+.main-nav-trigger {
+  float: right;
+}
+@media (max-width: 992px) {
+  .site-nav {
+    position: relative;
+  }
+  .site-nav .horizontal-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #48525a;
+    width: 100%;
+  }
+  .site-nav .horizontal-nav li {
+    width: 100%;
+    display: block;
+    margin-left: 0;
+    text-align: center;
+    border-bottom: 1px solid #5f6c76;
+  }
+  .site-nav .horizontal-nav a {
+    display: inline-block;
+    padding: 20px 30px;
+  }
+  .site-nav .horizontal-nav a.active {
+    border-color: transparent;
+  }
+  /* For demo only */
+  /* Global Variable */
+  /* Element Variables
+   Change @bar-w to adjust entire button size.
+   */
+  /* Ninja Button styles */
+  .ninja-btn {
+    display: inline-block;
+    float: left;
+    position: relative;
+    width: 35px;
+    height: 23.21212121px;
+    cursor: pointer;
+    padding: 0;
+    top: 9px;
+  }
+  .ninja-btn span,
+  .ninja-btn span:before,
+  .ninja-btn span:after {
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    background-color: #FFFFFF;
+    width: 35px;
+    height: 2px;
+  }
+  .ninja-btn span:hover,
+  .ninja-btn span:before:hover,
+  .ninja-btn span:after:hover {
+    background-color: #4bcaff;
+  }
+  .ninja-btn span {
+    position: relative;
+    display: inline-block;
+    float: left;
+    margin-top: 10.60606061px;
+  }
+  .ninja-btn span:before,
+  .ninja-btn span:after {
+    content: "";
+    position: absolute;
+    left: 0;
+  }
+  .ninja-btn span:before {
+    top: -10.60606061px;
+  }
+  .ninja-btn span:after {
+    top: 10.60606061px;
+  }
+  /* Ninja Button */
+  .ninja-btn.active span {
+    background-color: transparent;
+  }
+  .ninja-btn.active span:before,
+  .ninja-btn.active span:after {
+    top: 0;
+  }
+  .ninja-btn.active span:before {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+  }
+  .ninja-btn.active span:after {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+  }
+  /* Ninja Button Active */
+}
 .frm-group {
   margin-bottom: 35px;
 }
