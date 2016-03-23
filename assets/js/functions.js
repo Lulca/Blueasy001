@@ -41,8 +41,13 @@
     $(".ninja-btn").click( function() {
       $(this).toggleClass("active");
     });
+        
 
     function blueasyMenu () {
+
+      if ($(window).width() < 992) {
+              $('.horizontal-nav').hide();
+            } 
 
       var $trigger = $('.trigger-nav'),
           $menu = $('.trigger-victim');
@@ -51,10 +56,16 @@
           });
 
           $(window).resize(function () {
+
+            $(".ninja-btn").removeClass('active');
+
             if ($(window).width() > 992) {
-              
+
               $menu.removeAttr('style');
-            } 
+
+            } else {
+              $('.horizontal-nav').hide();
+            }
             
           });
     }
