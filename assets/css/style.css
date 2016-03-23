@@ -1886,28 +1886,66 @@ select[multiple].input-lg {
   float: right;
 }
 @media (max-width: 992px) {
-  .site-nav {
+  .site-nav,
+  .tab-wrapper {
     position: relative;
   }
-  .site-nav .horizontal-nav {
+  .site-nav .horizontal-nav,
+  .tab-menu {
     position: absolute;
     top: 100%;
     left: 0;
     background-color: #48525a;
     width: 100%;
+    z-index: 1;
   }
-  .site-nav .horizontal-nav li {
+  .site-nav .horizontal-nav li,
+  .tab-menu li {
     width: 100%;
     display: block;
     margin-left: 0;
     text-align: center;
     border-bottom: 1px solid #5f6c76;
   }
-  .site-nav .horizontal-nav a {
+  .site-nav .horizontal-nav a,
+  .tab-menu a {
     display: inline-block;
     padding: 20px 30px;
+    width: 100%;
   }
-  .site-nav .horizontal-nav a.active {
+  .site-nav .horizontal-nav a.active,
+  .tab-menu a.active {
+    border-color: transparent;
+  }
+  .stn-portfolio .site-nav,
+  .stn-portfolio .tab-wrapper {
+    position: relative;
+  }
+  .stn-portfolio .site-nav .horizontal-nav,
+  .stn-portfolio .tab-menu {
+    position: absolute;
+    top: 3.5%;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    z-index: 1;
+  }
+  .stn-portfolio .site-nav .horizontal-nav li,
+  .stn-portfolio .tab-menu li {
+    width: 100%;
+    display: block;
+    margin-left: 0;
+    text-align: center;
+    border-bottom: 1px solid #1a1a1a;
+  }
+  .stn-portfolio .site-nav .horizontal-nav a,
+  .stn-portfolio .tab-menu a {
+    display: inline-block;
+    padding: 20px 30px;
+    width: 100%;
+  }
+  .stn-portfolio .site-nav .horizontal-nav a.active,
+  .stn-portfolio .tab-menu a.active {
     border-color: transparent;
   }
   /* For demo only */
@@ -1942,6 +1980,11 @@ select[multiple].input-lg {
   .ninja-btn span:before:hover,
   .ninja-btn span:after:hover {
     background-color: #4bcaff;
+  }
+  .tab-wrapper .ninja-btn span,
+  .tab-wrapper .ninja-btn span:before,
+  .tab-wrapper .ninja-btn span:after {
+    background-color: black;
   }
   .ninja-btn span {
     position: relative;
@@ -2102,6 +2145,7 @@ p {
 }
 .thumbs-row {
   min-height: 570px;
+  z-index: 0;
 }
 .thumbs-row [class^='col-'] {
   margin-bottom: 30px;
@@ -2114,6 +2158,7 @@ p {
   color: #fff;
   font-size: 72px;
   text-align: center;
+  text-decoration: none;
 }
 .thumbs-row a:after {
   position: absolute;

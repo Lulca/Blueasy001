@@ -39,3 +39,40 @@
     border-color: @colorHover;
   }
 }
+
+
+
+.nav-adaptive-styles(@colorOfLi:@overlay, @top:100%, @colorOfBorder:@overlay) {
+
+  .site-nav, .tab-wrapper {
+      position: relative;
+    }
+
+    .site-nav .horizontal-nav, .tab-menu {
+      position: absolute;
+      top: @top;
+      left: 0;
+      background-color: @colorOfLi;
+      width: 100%;
+      z-index: 1;
+
+      li {
+        width: 100%;
+        display: block;
+        margin-left: 0;
+        text-align: center;
+        border-bottom: 1px solid lighten(@colorOfBorder, 10%);
+      }
+
+      a {
+        display: inline-block;
+        padding: 20px 30px;
+        width: 100%;
+
+        &.active {
+          border-color: transparent;
+        }
+      }
+    }
+
+}

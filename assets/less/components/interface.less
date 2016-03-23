@@ -40,36 +40,12 @@
 
 	// responsive menu
 	@media (max-width: 992px) {
-		.site-nav {
-			position: relative;
+
+		.nav-adaptive-styles();
+
+		.stn-portfolio {
+			.nav-adaptive-styles(#fff, 3.5%, black);
 		}
-
-		.site-nav .horizontal-nav {
-			position: absolute;
-			top: 100%;
-			left: 0;
-			background-color: @overlay;
-			width: 100%;
-			
-
-			li {
-				width: 100%;
-				display: block;
-				margin-left: 0;
-				text-align: center;
-				border-bottom: 1px solid lighten(@overlay, 10%);
-			}
-
-			a {
-				display: inline-block;
-				padding: 20px 30px;
-
-				&.active {
-					border-color: transparent;
-				}
-			}
-		}
-
 
 
 		/* For demo only */
@@ -138,6 +114,12 @@
    }
 
 
+   .tab-wrapper .ninja-btn span,
+   .tab-wrapper .ninja-btn span:before,
+   .tab-wrapper .ninja-btn span:after {
+   	background-color: black;
+   }
+
 
 
 
@@ -179,7 +161,7 @@
    		}
    		}/* Ninja Button Active */
 
-   	}
+   	}// media 992px
 
 	// form
 

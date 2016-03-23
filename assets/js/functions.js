@@ -43,6 +43,7 @@
     });
 
     function blueasyMenu () {
+
       var $trigger = $('.trigger-nav'),
           $menu = $('.trigger-victim');
           $trigger.click(function(){
@@ -53,9 +54,7 @@
             if ($(window).width() > 992) {
               
               $menu.removeAttr('style');
-            } else {
-              $('.horizontal-nav').hide();
-            }
+            } 
             
           });
     }
