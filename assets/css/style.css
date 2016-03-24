@@ -2147,7 +2147,7 @@ p {
   min-height: 570px;
   z-index: 0;
 }
-.thumbs-row f [class^='col-'] {
+.thumbs-row [class^='col-'] {
   margin-bottom: 30px;
 }
 .thumbs-row a {
